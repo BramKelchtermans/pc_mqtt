@@ -1,0 +1,29 @@
+{
+    "mqtt_settings": {
+        "broker": "IP_ADDRESS",
+        "username": "MQTT_USERNAME",
+        "password": "MQTT_PASSWORD",
+        "topic": "DEVICE_TOPIC"
+    },
+    "games": [
+        {
+            "id": "GAME_ID",
+            "friendly_name": "GAME_NAME",
+            "path": "PATH_TO_EXECUTABLE"
+        }
+    ],
+    "computer_stats": {
+        "device_temps": [
+            {
+                "device_name": "CPU Core",
+                "device_topic": "cpu_temp"
+            }
+        ],
+        "drive_loads": [
+            {
+                "drive_letter": "C",
+                "drive_topic": "c_load"
+            }
+        ]
+    }
+}
