@@ -54,15 +54,13 @@ def publish_stats():
 
     # Publish device temps
     for d in computer_stats['device_temps']:
-        print(d)
         temp = get_temp(d['device_name'])
-        print(temp)
         publish.single(mqtt_topic + "/" + d['device_topic'], "{:.2f}".format(temp), hostname=mqtt_broker)
 
     # Publish disk loads
-    for d in computer_stats['drive_loads']:
-        temp = get_load(d['drive_letter'] + " - Used Space")
-        publish.single(mqtt_topic + "/" + d['drive_topic'], "{:.2f}".format(temp), hostname=mqtt_broker)
+    for d in computer_stats['device_loads']:
+        temp = get_load(d['device_name'])
+        publish.single(mqtt_topic + "/" + d['device_topic'], "{:.2f}".format(temp), hostname=mqtt_broker)
 
     # Publish device status
     publish.single(mqtt_topic + "/power_status", "ON", hostname=mqtt_broker)

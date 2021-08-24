@@ -19,10 +19,10 @@
                 "device_topic": "cpu_temp"
             }
         ],
-        "drive_loads": [
+        "device_loads": [
             {
-                "drive_letter": "C",
-                "drive_topic": "c_load"
+                "device_name": "C",
+                "device_topic": "c_load"
             }
         ]
     }
